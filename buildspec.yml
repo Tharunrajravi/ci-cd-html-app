@@ -1,0 +1,13 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - yum install -y httpd
+  build:
+    commands:
+      - echo "Build completed"
+  post_build:
+    commands:
+      - chmod +x deploy.sh
+      - ./deploy.sh
